@@ -1,0 +1,7194 @@
+{
+  "schema": 1,
+  "name": "Arbiter-6 (corrected)",
+  "boards": [
+    {
+      "index": 0,
+      "cols": 30,
+      "x": 168,
+      "y": 120,
+      "locked": false,
+      "angle": 0,
+      "sizeKey": "half",
+      "rails": true
+    },
+    {
+      "index": 1,
+      "cols": 63,
+      "x": 288,
+      "y": -336,
+      "locked": false,
+      "angle": 0,
+      "sizeKey": "full",
+      "rails": true
+    },
+    {
+      "index": 2,
+      "cols": 63,
+      "x": 288,
+      "y": -792,
+      "locked": false,
+      "angle": 0,
+      "sizeKey": "full",
+      "rails": true
+    },
+    {
+      "index": 3,
+      "cols": 30,
+      "x": -600,
+      "y": 120,
+      "locked": false,
+      "angle": 0,
+      "sizeKey": "half",
+      "rails": true
+    }
+  ],
+  "parts": [
+    {
+      "id": "c2",
+      "kind": "DIPSwitch",
+      "x": 176,
+      "y": 288,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0,
+        "states": [
+          false,
+          true,
+          false,
+          false
+        ],
+        "bits": 4,
+        "switchNames": [
+          "A3",
+          "A2",
+          "A1",
+          "A0"
+        ],
+        "dipDesignToggle": false
+      }
+    },
+    {
+      "id": "c3",
+      "kind": "DIPSwitch",
+      "x": 752,
+      "y": 288,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0,
+        "states": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "bits": 4,
+        "switchNames": [
+          "B3",
+          "B2",
+          "B1",
+          "B0"
+        ],
+        "dipDesignToggle": false
+      }
+    },
+    {
+      "id": "c4",
+      "kind": "Resistor_220",
+      "x": 168,
+      "y": 422,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "10000",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c5",
+      "kind": "Resistor_220",
+      "x": 192,
+      "y": 422,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "10000",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c6",
+      "kind": "Resistor_220",
+      "x": 216,
+      "y": 422,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "10000",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c7",
+      "kind": "Resistor_220",
+      "x": 240,
+      "y": 422,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "10000",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c8",
+      "kind": "Resistor_220",
+      "x": 816,
+      "y": 422,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "10000",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c9",
+      "kind": "Resistor_220",
+      "x": 744,
+      "y": 422,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "10000",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c10",
+      "kind": "Resistor_220",
+      "x": 768,
+      "y": 422,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "10000",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c11",
+      "kind": "Resistor_220",
+      "x": 792,
+      "y": 422,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "10000",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c56",
+      "kind": "NOTGate7404",
+      "x": 302,
+      "y": -168,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c57",
+      "kind": "NOTGate7404",
+      "x": 566,
+      "y": -168,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c118",
+      "kind": "Comparator7485",
+      "x": 902,
+      "y": -168,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c351",
+      "kind": "NANDGate7430",
+      "x": 1166,
+      "y": -168,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c352",
+      "kind": "NANDGate7430",
+      "x": 1382,
+      "y": -168,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c445",
+      "kind": "NOTGate7404",
+      "x": 1598,
+      "y": -168,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c501",
+      "kind": "ANDGate7408",
+      "x": 302,
+      "y": -624,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c502",
+      "kind": "ANDGate7408",
+      "x": 518,
+      "y": -624,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c1205",
+      "kind": "ANDGate7408",
+      "x": 806,
+      "y": -624,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c1206",
+      "kind": "ORGate7432",
+      "x": 998,
+      "y": -624,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c1319",
+      "kind": "ANDGate7408",
+      "x": 1190,
+      "y": -624,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0
+      }
+    },
+    {
+      "id": "c1871",
+      "kind": "LED_RED",
+      "x": 1438.344827586207,
+      "y": -731.5862068965517,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0,
+        "cr": 220,
+        "cg": 50,
+        "cb": 50,
+        "colorName": "red"
+      }
+    },
+    {
+      "id": "c1872",
+      "kind": "LED_RED",
+      "x": 1558.344827586207,
+      "y": -731.5862068965517,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0,
+        "cr": 220,
+        "cg": 50,
+        "cb": 50,
+        "colorName": "red"
+      }
+    },
+    {
+      "id": "c1873",
+      "kind": "LED_RED",
+      "x": 1678.344827586207,
+      "y": -731.5862068965517,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 0,
+        "cr": 220,
+        "cg": 50,
+        "cb": 50,
+        "colorName": "red"
+      }
+    },
+    {
+      "id": "c2132",
+      "kind": "Battery_9V",
+      "x": -593,
+      "y": 576,
+      "label": "5V regulated supply (simulation)",
+      "locked": false,
+      "attrs": {
+        "angle": 0,
+        "volts": 5,
+        "voltageLabel": "5",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c3001",
+      "kind": "Resistor_220",
+      "x": 1392,
+      "y": -450,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "330",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c3002",
+      "kind": "Resistor_220",
+      "x": 1536,
+      "y": -450,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "330",
+        "isCustom": true
+      }
+    },
+    {
+      "id": "c3003",
+      "kind": "Resistor_220",
+      "x": 1680,
+      "y": -450,
+      "label": "",
+      "locked": false,
+      "attrs": {
+        "angle": 90,
+        "resistance": "330",
+        "isCustom": true
+      }
+    }
+  ],
+  "joints": [],
+  "connections": [
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 1
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 1,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          204,
+          120
+        ],
+        [
+          204,
+          192
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 2,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          228,
+          120
+        ],
+        [
+          228,
+          192
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 3
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 3,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          252,
+          120
+        ],
+        [
+          252,
+          192
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 4,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          276,
+          120
+        ],
+        [
+          276,
+          192
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 28
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 28,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          852,
+          120
+        ],
+        [
+          852,
+          192
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 27
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 27,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          828,
+          120
+        ],
+        [
+          828,
+          192
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 26
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 26,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          804,
+          120
+        ],
+        [
+          804,
+          192
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 25
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 25,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          780,
+          120
+        ],
+        [
+          780,
+          192
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 2,
+        "row": 6
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 7,
+        "row": 6
+      },
+      "color": "#8b5e3c",
+      "locked": false,
+      "pivots": [
+        [
+          216,
+          372
+        ],
+        [
+          336,
+          372
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 3,
+        "row": 7
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 8,
+        "row": 7
+      },
+      "color": "#8b5e3c",
+      "locked": false,
+      "pivots": [
+        [
+          240,
+          396
+        ],
+        [
+          360,
+          396
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 9,
+        "row": 8
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 4,
+        "row": 8
+      },
+      "color": "#8b5e3c",
+      "locked": false,
+      "pivots": [
+        [
+          384,
+          420
+        ],
+        [
+          264,
+          420
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 27,
+        "row": 6
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 22,
+        "row": 6
+      },
+      "color": "#8b5e3c",
+      "locked": false,
+      "pivots": [
+        [
+          816,
+          372
+        ],
+        [
+          696,
+          372
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 26,
+        "row": 7
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 21,
+        "row": 7
+      },
+      "color": "#8b5e3c",
+      "locked": false,
+      "pivots": [
+        [
+          792,
+          396
+        ],
+        [
+          672,
+          396
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 20,
+        "row": 8
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 25,
+        "row": 8
+      },
+      "color": "#8b5e3c",
+      "locked": false,
+      "pivots": [
+        [
+          648,
+          420
+        ],
+        [
+          768,
+          420
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 2,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 8,
+        "row": 0
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          336,
+          -252
+        ],
+        [
+          300,
+          -252
+        ],
+        [
+          300,
+          180
+        ],
+        [
+          360,
+          180
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 4,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 9,
+        "row": 0
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          384,
+          -252
+        ],
+        [
+          468,
+          -252
+        ],
+        [
+          468,
+          180
+        ],
+        [
+          384,
+          180
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 7,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 3,
+        "row": 9
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          348,
+          192
+        ],
+        [
+          348,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 6,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 1,
+        "row": 9
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          324,
+          192
+        ],
+        [
+          324,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 23,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 15,
+        "row": 0
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          732,
+          192
+        ],
+        [
+          732,
+          -252
+        ],
+        [
+          648,
+          -252
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 13,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 22,
+        "row": 0
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          600,
+          -252
+        ],
+        [
+          564,
+          -252
+        ],
+        [
+          564,
+          180
+        ],
+        [
+          696,
+          180
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 21,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 14,
+        "row": 9
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          672,
+          156
+        ],
+        [
+          636,
+          156
+        ],
+        [
+          636,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 20,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 12,
+        "row": 9
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          648,
+          168
+        ],
+        [
+          588,
+          168
+        ],
+        [
+          588,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 1,
+        "row": 0
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 1
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          324,
+          -264
+        ],
+        [
+          324,
+          -336
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 12,
+        "row": 0
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 12
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          588,
+          -264
+        ],
+        [
+          588,
+          -336
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 7,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 7
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          444,
+          -24
+        ],
+        [
+          444,
+          48
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 18,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 18
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          708,
+          -24
+        ],
+        [
+          708,
+          48
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 20,
+        "row": 1
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 26,
+        "row": 9
+      },
+      "color": "#ecc94b",
+      "locked": false,
+      "pivots": [
+        [
+          660,
+          216
+        ],
+        [
+          660,
+          -12
+        ],
+        [
+          912,
+          -12
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 23,
+        "row": 1
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 33,
+        "row": 0
+      },
+      "color": "#ecc94b",
+      "locked": false,
+      "pivots": [
+        [
+          720,
+          204
+        ],
+        [
+          1092,
+          204
+        ],
+        [
+          1092,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 31,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 22,
+        "row": 1
+      },
+      "color": "#ecc94b",
+      "locked": false,
+      "pivots": [
+        [
+          1032,
+          -252
+        ],
+        [
+          756,
+          -252
+        ],
+        [
+          756,
+          228
+        ],
+        [
+          696,
+          228
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 21,
+        "row": 1
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 28,
+        "row": 0
+      },
+      "color": "#ecc94b",
+      "locked": false,
+      "pivots": [
+        [
+          684,
+          216
+        ],
+        [
+          684,
+          -108
+        ],
+        [
+          900,
+          -108
+        ],
+        [
+          900,
+          -228
+        ],
+        [
+          948,
+          -228
+        ],
+        [
+          948,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 9,
+        "row": 1
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 32,
+        "row": 0
+      },
+      "color": "#48bb78",
+      "locked": false,
+      "pivots": [
+        [
+          384,
+          204
+        ],
+        [
+          540,
+          204
+        ],
+        [
+          540,
+          -228
+        ],
+        [
+          1044,
+          -228
+        ],
+        [
+          1044,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 8,
+        "row": 1
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 30,
+        "row": 0
+      },
+      "color": "#48bb78",
+      "locked": false,
+      "pivots": [
+        [
+          372,
+          216
+        ],
+        [
+          372,
+          -84
+        ],
+        [
+          876,
+          -84
+        ],
+        [
+          876,
+          -276
+        ],
+        [
+          1008,
+          -276
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 7,
+        "row": 1
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 29,
+        "row": 0
+      },
+      "color": "#48bb78",
+      "locked": false,
+      "pivots": [
+        [
+          336,
+          228
+        ],
+        [
+          516,
+          228
+        ],
+        [
+          516,
+          -204
+        ],
+        [
+          972,
+          -204
+        ],
+        [
+          972,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 6,
+        "row": 1
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 27,
+        "row": 0
+      },
+      "color": "#48bb78",
+      "locked": false,
+      "pivots": [
+        [
+          324,
+          216
+        ],
+        [
+          324,
+          252
+        ],
+        [
+          492,
+          252
+        ],
+        [
+          492,
+          -180
+        ],
+        [
+          924,
+          -180
+        ],
+        [
+          924,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 26,
+        "row": 0
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 26
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          900,
+          -264
+        ],
+        [
+          900,
+          -336
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 27,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 27
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          948,
+          -24
+        ],
+        [
+          948,
+          48
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 29,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 29
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          996,
+          -24
+        ],
+        [
+          996,
+          48
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 28,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BP",
+        "col": 28
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 37,
+        "row": 0
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 37
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          1188,
+          -264
+        ],
+        [
+          1188,
+          -336
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 46
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 46,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          1404,
+          -336
+        ],
+        [
+          1404,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 43,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 43
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          1332,
+          -24
+        ],
+        [
+          1332,
+          48
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 52,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 52
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          1548,
+          -24
+        ],
+        [
+          1548,
+          48
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 2,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 37,
+        "row": 9
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          336,
+          -36
+        ],
+        [
+          1176,
+          -36
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 4,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 38,
+        "row": 9
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          384,
+          0
+        ],
+        [
+          1200,
+          0
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 3,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 39,
+        "row": 9
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          360,
+          -276
+        ],
+        [
+          852,
+          -276
+        ],
+        [
+          852,
+          -60
+        ],
+        [
+          1212,
+          -60
+        ],
+        [
+          1212,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 9,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 40,
+        "row": 9
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          396,
+          240
+        ],
+        [
+          396,
+          12
+        ],
+        [
+          1248,
+          12
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 20,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 41,
+        "row": 9
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          648,
+          252
+        ],
+        [
+          1260,
+          252
+        ],
+        [
+          1260,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 21,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 42,
+        "row": 9
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          684,
+          240
+        ],
+        [
+          684,
+          276
+        ],
+        [
+          1284,
+          276
+        ],
+        [
+          1284,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 39,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 22,
+        "row": 2
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          1224,
+          -252
+        ],
+        [
+          1116,
+          -252
+        ],
+        [
+          1116,
+          180
+        ],
+        [
+          708,
+          180
+        ],
+        [
+          708,
+          240
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 23,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 40,
+        "row": 0
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          732,
+          240
+        ],
+        [
+          732,
+          300
+        ],
+        [
+          1164,
+          300
+        ],
+        [
+          1164,
+          -228
+        ],
+        [
+          1236,
+          -228
+        ],
+        [
+          1236,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 13,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 46,
+        "row": 9
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          612,
+          -24
+        ],
+        [
+          612,
+          36
+        ],
+        [
+          1380,
+          36
+        ],
+        [
+          1380,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 15,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 47,
+        "row": 9
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          660,
+          -24
+        ],
+        [
+          660,
+          -60
+        ],
+        [
+          828,
+          -60
+        ],
+        [
+          828,
+          60
+        ],
+        [
+          1404,
+          60
+        ],
+        [
+          1404,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 14,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 48,
+        "row": 9
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          624,
+          -288
+        ],
+        [
+          1380,
+          -288
+        ],
+        [
+          1380,
+          -36
+        ],
+        [
+          1440,
+          -36
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 49,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 23,
+        "row": 3
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          1452,
+          -24
+        ],
+        [
+          1452,
+          312
+        ],
+        [
+          708,
+          312
+        ],
+        [
+          708,
+          264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 6,
+        "row": 3
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 50,
+        "row": 9
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          312,
+          276
+        ],
+        [
+          612,
+          276
+        ],
+        [
+          612,
+          72
+        ],
+        [
+          1476,
+          72
+        ],
+        [
+          1476,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 7,
+        "row": 3
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 51,
+        "row": 9
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          348,
+          264
+        ],
+        [
+          348,
+          300
+        ],
+        [
+          444,
+          300
+        ],
+        [
+          444,
+          84
+        ],
+        [
+          1500,
+          84
+        ],
+        [
+          1500,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 8,
+        "row": 3
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 48,
+        "row": 0
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          372,
+          264
+        ],
+        [
+          372,
+          324
+        ],
+        [
+          1356,
+          324
+        ],
+        [
+          1356,
+          -252
+        ],
+        [
+          1440,
+          -252
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 9,
+        "row": 3
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 49,
+        "row": 0
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          396,
+          264
+        ],
+        [
+          396,
+          312
+        ],
+        [
+          420,
+          312
+        ],
+        [
+          420,
+          96
+        ],
+        [
+          1140,
+          96
+        ],
+        [
+          1140,
+          -204
+        ],
+        [
+          1452,
+          -204
+        ],
+        [
+          1452,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 55,
+        "row": 0
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 55
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          1620,
+          -264
+        ],
+        [
+          1620,
+          -336
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 43,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 56,
+        "row": 0
+      },
+      "color": "#38b2ac",
+      "locked": false,
+      "pivots": [
+        [
+          1320,
+          -276
+        ],
+        [
+          1632,
+          -276
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 52,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 58,
+        "row": 0
+      },
+      "color": "#38b2ac",
+      "locked": false,
+      "pivots": [
+        [
+          1536,
+          -252
+        ],
+        [
+          1680,
+          -252
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 61,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 61
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          1764,
+          -24
+        ],
+        [
+          1764,
+          48
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 1,
+        "row": 0
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "TP",
+        "col": 1
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          324,
+          -720
+        ],
+        [
+          324,
+          -792
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 2,
+        "bus": "TP",
+        "col": 10
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 10,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          540,
+          -792
+        ],
+        [
+          540,
+          -720
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 7,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "BN",
+        "col": 7
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          468,
+          -480
+        ],
+        [
+          468,
+          -408
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 16,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "BN",
+        "col": 16
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          684,
+          -480
+        ],
+        [
+          684,
+          -408
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 2,
+        "row": 8
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 1,
+        "row": 9
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          336,
+          -60
+        ],
+        [
+          276,
+          -60
+        ],
+        [
+          276,
+          -468
+        ],
+        [
+          312,
+          -468
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 4,
+        "row": 8
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 2,
+        "row": 9
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          384,
+          -60
+        ],
+        [
+          348,
+          -60
+        ],
+        [
+          348,
+          -108
+        ],
+        [
+          264,
+          -108
+        ],
+        [
+          264,
+          -468
+        ],
+        [
+          336,
+          -468
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 4,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 3,
+        "row": 1
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          372,
+          -480
+        ],
+        [
+          372,
+          -240
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 5,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 5,
+        "row": 1
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          420,
+          -480
+        ],
+        [
+          420,
+          -240
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 10,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 13,
+        "row": 8
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          528,
+          -444
+        ],
+        [
+          252,
+          -444
+        ],
+        [
+          252,
+          -12
+        ],
+        [
+          420,
+          -12
+        ],
+        [
+          420,
+          -60
+        ],
+        [
+          600,
+          -60
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 15,
+        "row": 8
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 11,
+        "row": 9
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          636,
+          -48
+        ],
+        [
+          636,
+          -108
+        ],
+        [
+          396,
+          -108
+        ],
+        [
+          396,
+          -36
+        ],
+        [
+          276,
+          -36
+        ],
+        [
+          276,
+          60
+        ],
+        [
+          780,
+          60
+        ],
+        [
+          780,
+          -468
+        ],
+        [
+          552,
+          -468
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 14,
+        "row": 1
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 13,
+        "row": 9
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          612,
+          -240
+        ],
+        [
+          612,
+          -480
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 16,
+        "row": 1
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 14,
+        "row": 9
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          660,
+          -240
+        ],
+        [
+          660,
+          -456
+        ],
+        [
+          624,
+          -456
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 3,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 5,
+        "row": 0
+      },
+      "color": "#ecc94b",
+      "locked": false,
+      "pivots": [
+        [
+          360,
+          -492
+        ],
+        [
+          468,
+          -492
+        ],
+        [
+          468,
+          -708
+        ],
+        [
+          408,
+          -708
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 6,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 6,
+        "row": 9
+      },
+      "color": "#ecc94b",
+      "locked": false,
+      "pivots": [
+        [
+          444,
+          -720
+        ],
+        [
+          444,
+          -636
+        ],
+        [
+          492,
+          -636
+        ],
+        [
+          492,
+          -516
+        ],
+        [
+          444,
+          -516
+        ],
+        [
+          444,
+          -480
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 12,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 14,
+        "row": 0
+      },
+      "color": "#ecc94b",
+      "locked": false,
+      "pivots": [
+        [
+          576,
+          -492
+        ],
+        [
+          684,
+          -492
+        ],
+        [
+          684,
+          -708
+        ],
+        [
+          624,
+          -708
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 15,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 15,
+        "row": 9
+      },
+      "color": "#ecc94b",
+      "locked": false,
+      "pivots": [
+        [
+          660,
+          -720
+        ],
+        [
+          660,
+          -636
+        ],
+        [
+          708,
+          -636
+        ],
+        [
+          708,
+          -516
+        ],
+        [
+          660,
+          -516
+        ],
+        [
+          660,
+          -480
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 22,
+        "row": 0
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "TP",
+        "col": 22
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          828,
+          -720
+        ],
+        [
+          828,
+          -792
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 2,
+        "bus": "TP",
+        "col": 30
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 30,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          1020,
+          -792
+        ],
+        [
+          1020,
+          -720
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 28,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "BN",
+        "col": 28
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          972,
+          -480
+        ],
+        [
+          972,
+          -408
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 36,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "BN",
+        "col": 36
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          1164,
+          -480
+        ],
+        [
+          1164,
+          -408
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 30,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 22,
+        "row": 9
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          1008,
+          -12
+        ],
+        [
+          924,
+          -12
+        ],
+        [
+          924,
+          108
+        ],
+        [
+          804,
+          108
+        ],
+        [
+          804,
+          -480
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 23,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 52,
+        "row": 1
+      },
+      "color": "#48bb78",
+      "locked": false,
+      "pivots": [
+        [
+          840,
+          -480
+        ],
+        [
+          840,
+          -240
+        ],
+        [
+          1536,
+          -240
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 25,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 32,
+        "row": 9
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          888,
+          -456
+        ],
+        [
+          1332,
+          -456
+        ],
+        [
+          1332,
+          -84
+        ],
+        [
+          1068,
+          -84
+        ],
+        [
+          1068,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 26,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 43,
+        "row": 1
+      },
+      "color": "#48bb78",
+      "locked": false,
+      "pivots": [
+        [
+          912,
+          -480
+        ],
+        [
+          912,
+          -240
+        ],
+        [
+          1320,
+          -240
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 24,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 30,
+        "row": 9
+      },
+      "color": "#48bb78",
+      "locked": false,
+      "pivots": [
+        [
+          864,
+          -492
+        ],
+        [
+          1008,
+          -492
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 27,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 33,
+        "row": 9
+      },
+      "color": "#48bb78",
+      "locked": false,
+      "pivots": [
+        [
+          936,
+          -468
+        ],
+        [
+          1080,
+          -468
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 31,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 57,
+        "row": 0
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          1032,
+          -480
+        ],
+        [
+          1032,
+          -264
+        ],
+        [
+          1656,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 59,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 34,
+        "row": 9
+      },
+      "color": "#ed64a6",
+      "locked": false,
+      "pivots": [
+        [
+          1104,
+          -480
+        ],
+        [
+          1104,
+          -264
+        ],
+        [
+          1704,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 32,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 39,
+        "row": 0
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          1056,
+          -492
+        ],
+        [
+          1188,
+          -492
+        ],
+        [
+          1188,
+          -708
+        ],
+        [
+          1224,
+          -708
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 38,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 35,
+        "row": 9
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          1212,
+          -480
+        ],
+        [
+          1212,
+          -516
+        ],
+        [
+          1140,
+          -516
+        ],
+        [
+          1140,
+          -480
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 16,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 40,
+        "row": 0
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          672,
+          -732
+        ],
+        [
+          1248,
+          -732
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 7,
+        "row": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 39,
+        "row": 9
+      },
+      "color": "#4299e1",
+      "locked": false,
+      "pivots": [
+        [
+          456,
+          -732
+        ],
+        [
+          516,
+          -732
+        ],
+        [
+          516,
+          -540
+        ],
+        [
+          1236,
+          -540
+        ],
+        [
+          1236,
+          -480
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 38,
+        "row": 0
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "TP",
+        "col": 38
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          1188,
+          -720
+        ],
+        [
+          1188,
+          -792
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 44,
+        "row": 9
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "BN",
+        "col": 44
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          1356,
+          -480
+        ],
+        [
+          1356,
+          -408
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c4",
+        "pin": "B"
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 1
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          204,
+          456
+        ],
+        [
+          204,
+          504
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c5",
+        "pin": "B"
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 2
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          228,
+          456
+        ],
+        [
+          228,
+          504
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c6",
+        "pin": "B"
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 3
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          252,
+          456
+        ],
+        [
+          252,
+          504
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c7",
+        "pin": "B"
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          276,
+          456
+        ],
+        [
+          276,
+          504
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c9",
+        "pin": "B"
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 25
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          780,
+          456
+        ],
+        [
+          780,
+          504
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c10",
+        "pin": "B"
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 26
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          804,
+          456
+        ],
+        [
+          804,
+          504
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c11",
+        "pin": "B"
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 27
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          828,
+          456
+        ],
+        [
+          828,
+          504
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c8",
+        "pin": "B"
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 28
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          852,
+          456
+        ],
+        [
+          852,
+          504
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BP",
+        "col": 62
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 62
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          1788,
+          24
+        ],
+        [
+          1788,
+          -336
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 61
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "BP",
+        "col": 61
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          1764,
+          -336
+        ],
+        [
+          1764,
+          -432
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 2,
+        "bus": "BP",
+        "col": 62
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "TP",
+        "col": 62
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          1788,
+          -432
+        ],
+        [
+          1788,
+          -792
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 2,
+        "bus": "TN",
+        "col": 62
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "BN",
+        "col": 62
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          1800,
+          -768
+        ],
+        [
+          1800,
+          -408
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 2,
+        "bus": "BN",
+        "col": 61
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TN",
+        "col": 61
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          1740,
+          -408
+        ],
+        [
+          1740,
+          -312
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TN",
+        "col": 62
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 62
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          1800,
+          -312
+        ],
+        [
+          1800,
+          48
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 29
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 60
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          864,
+          516
+        ],
+        [
+          1728,
+          516
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 29
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BP",
+        "col": 60
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          1716,
+          120
+        ],
+        [
+          1716,
+          24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c2132",
+        "pin": "+"
+      },
+      "b": {
+        "type": "hole",
+        "board": 3,
+        "col": 4,
+        "row": 8
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          -516,
+          576
+        ],
+        [
+          -516,
+          408
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c2132",
+        "pin": "-"
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 0
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          -550,
+          588
+        ],
+        [
+          168,
+          588
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 0
+      },
+      "b": {
+        "type": "hole",
+        "board": 3,
+        "col": 14,
+        "row": 8
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          168,
+          132
+        ],
+        [
+          -252,
+          132
+        ],
+        [
+          -252,
+          408
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 1,
+        "row": 6
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 6,
+        "row": 5
+      },
+      "color": "#8b5e3c",
+      "locked": false,
+      "pivots": [
+        [
+          192,
+          348
+        ],
+        [
+          312,
+          348
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 6,
+        "row": 5
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 6,
+        "row": 4
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          324,
+          336
+        ],
+        [
+          324,
+          288
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 7,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 7,
+        "row": 5
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 8,
+        "row": 5
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 8,
+        "row": 4
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 9,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 9,
+        "row": 5
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 1,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 2,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 3,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 4,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 5,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 6,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 7,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 1,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 2,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 3,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 4,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 5,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 6,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c56",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 7,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 12,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 13,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 14,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 15,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 16,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 17,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 18,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 12,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 13,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 14,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 15,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 16,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 17,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c57",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 18,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 26,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 27,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 28,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 29,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 30,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 31,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 32,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 33,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "16"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 26,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "15"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 27,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 28,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 29,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 30,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 31,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 32,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c118",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 33,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 37,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 38,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 39,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 40,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 41,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 42,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 43,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 37,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 38,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 39,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 40,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 41,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 42,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c351",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 43,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 46,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 47,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 48,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 49,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 50,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 51,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 52,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 46,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 47,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 48,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 49,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 50,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 51,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c352",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 52,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 55,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 56,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 57,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 58,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 59,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 60,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 61,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 55,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 56,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 57,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 58,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 59,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 60,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c445",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 61,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 1,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 2,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 3,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 4,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 5,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 6,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 7,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 1,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 2,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 3,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 4,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 5,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 6,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c501",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 7,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 10,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 11,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 12,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 13,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 14,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 15,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 16,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 10,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 11,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 12,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 13,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 14,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 15,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c502",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 16,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 22,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 23,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 24,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 25,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 26,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 27,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 28,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 22,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 23,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 24,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 25,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 26,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 27,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1205",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 28,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 30,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 31,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 32,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 33,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 34,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 35,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 36,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 30,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 31,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 32,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 33,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 34,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 35,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1206",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 36,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "1"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 38,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "2"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 39,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "3"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 40,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "4"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 41,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "5"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 42,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "6"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 43,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "7"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 44,
+        "row": 5
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "14"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 38,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "13"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 39,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "12"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 40,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "11"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 41,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "10"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 42,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "9"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 43,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1319",
+        "pin": "8"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 44,
+        "row": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 23,
+        "row": 5
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 23,
+        "row": 4
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 22,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 22,
+        "row": 5
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 21,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 21,
+        "row": 5
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 20,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 20,
+        "row": 5
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 23,
+        "row": 5
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 28,
+        "row": 6
+      },
+      "color": "#8b5e3c",
+      "locked": false,
+      "pivots": [
+        [
+          720,
+          348
+        ],
+        [
+          840,
+          348
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 33,
+        "row": 9
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 29,
+        "row": 9
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          1080,
+          -24
+        ],
+        [
+          984,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c3001",
+        "pin": "A"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 32,
+        "row": 9
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          1428,
+          -484
+        ],
+        [
+          1428,
+          -500
+        ],
+        [
+          1056,
+          -500
+        ],
+        [
+          1056,
+          -480
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c3001",
+        "pin": "B"
+      },
+      "b": {
+        "type": "pin",
+        "partId": "c1871",
+        "pin": "anode"
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c3002",
+        "pin": "A"
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 31,
+        "row": 9
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          1572,
+          -484
+        ],
+        [
+          1572,
+          -520
+        ],
+        [
+          1032,
+          -520
+        ],
+        [
+          1032,
+          -24
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c3002",
+        "pin": "B"
+      },
+      "b": {
+        "type": "pin",
+        "partId": "c1872",
+        "pin": "anode"
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c3003",
+        "pin": "A"
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 35,
+        "row": 9
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": [
+        [
+          1716,
+          -484
+        ],
+        [
+          1716,
+          -540
+        ],
+        [
+          1128,
+          -540
+        ],
+        [
+          1128,
+          -480
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c3003",
+        "pin": "B"
+      },
+      "b": {
+        "type": "pin",
+        "partId": "c1873",
+        "pin": "anode"
+      },
+      "color": "#ed8936",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1871",
+        "pin": "cathode"
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "TN",
+        "col": 50
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1872",
+        "pin": "cathode"
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "TN",
+        "col": 55
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c1873",
+        "pin": "cathode"
+      },
+      "b": {
+        "type": "bus",
+        "board": 2,
+        "bus": "TN",
+        "col": 60
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 1,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 1,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 12,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 12,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 26,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 26,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 37,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 37,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 46,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 46,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 1,
+        "col": 55,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 55,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 1,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 1,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 10,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 10,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 22,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 22,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 30,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 30,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 2,
+        "col": 38,
+        "row": 4
+      },
+      "b": {
+        "type": "hole",
+        "board": 2,
+        "col": 38,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "pin",
+        "partId": "c2132",
+        "pin": "+"
+      },
+      "b": {
+        "type": "hole",
+        "board": 0,
+        "col": 1,
+        "row": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    }
+  ],
+  "notes": [
+    {
+      "id": "note_1940",
+      "text": "A                        INPUTS                        B",
+      "x": 360,
+      "y": 336,
+      "w": 297.0225080385874,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2074",
+      "text": "COMPARATOR",
+      "x": 936,
+      "y": -216,
+      "w": 129.46700591022318,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2075",
+      "text": "NOT A",
+      "x": 336,
+      "y": -216,
+      "w": 80,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2076",
+      "text": "NOT B",
+      "x": 600,
+      "y": -216,
+      "w": 80,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2077",
+      "text": "S (PvS) A",
+      "x": 1200,
+      "y": -216,
+      "w": 90.66083404658389,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2078",
+      "text": "S (PvS) B",
+      "x": 1416,
+      "y": -216,
+      "w": 90.66083404658389,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2079",
+      "text": "NOT S (PvS) A   &   NOT S (PvS) B",
+      "x": 1608,
+      "y": -216,
+      "w": 262.3697267778432,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2080",
+      "text": "FLAG A",
+      "x": 336,
+      "y": -672,
+      "w": 80,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2081",
+      "text": "FLAG B",
+      "x": 552,
+      "y": -672,
+      "w": 80,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2082",
+      "text": "FINAL_A_WIN   &   FINAL_B_WIN",
+      "x": 864,
+      "y": -696,
+      "w": 265.15112540193036,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2083",
+      "text": "A_WIN_FINAL",
+      "x": 1200,
+      "y": -696,
+      "w": 127.29236182733484,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2084",
+      "text": "B_WIN_FINAL",
+      "x": 1248,
+      "y": -552,
+      "w": 121.02833222107381,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_2086",
+      "text": "A_WIN        TIE        B_WIN",
+      "x": 1464,
+      "y": -800,
+      "w": 256.3846125379141,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 15,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_3004",
+      "text": "LEDs: A_WIN / TIE / B_WIN, each with a 330R series resistor. Power: regulated 5V; VCC and GND wired on every IC.",
+      "x": 1060,
+      "y": -920,
+      "w": 760,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 14,
+      "fontFamily": "Arial",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_3005",
+      "text": "POWER: use a regulated 5V supply. The 9V battery + diode dropper was removed: 74HC logic must stay below 5.5V.",
+      "x": -760,
+      "y": 620,
+      "w": 540,
+      "h": 40,
+      "color": "#000000",
+      "fontSize": 14,
+      "fontFamily": "Arial",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    }
+  ],
+  "textLabels": []
+}
