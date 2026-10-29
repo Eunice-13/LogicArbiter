@@ -1,0 +1,367 @@
+[
+ {
+  "id": "uA1",
+  "kind": "DFlipFlop74175",
+  "x": -1162,
+  "y": 768,
+  "label": "A RANK REG 74HC175",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "q": [
+    false,
+    false,
+    false,
+    false
+   ]
+  }
+ },
+ {
+  "id": "uA2",
+  "kind": "DFlipFlop7474",
+  "x": -922,
+  "y": 768,
+  "label": "A DONE FF 74HC74",
+  "locked": false,
+  "attrs": {
+   "angle": 0
+  }
+ },
+ {
+  "id": "uA3",
+  "kind": "ANDGate7411",
+  "x": -682,
+  "y": 768,
+  "label": "A/B ACCEPT 74HC11",
+  "locked": false,
+  "attrs": {
+   "angle": 0
+  }
+ },
+ {
+  "id": "bA",
+  "kind": "PushButton",
+  "x": -1160,
+  "y": 640,
+  "label": "A SUBMIT",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "on": false
+  }
+ },
+ {
+  "id": "pA",
+  "kind": "Resistor_1k",
+  "x": -1240,
+  "y": 880,
+  "label": "",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "resistance": "10000",
+   "isCustom": true
+  }
+ },
+ {
+  "id": "LA",
+  "kind": "LED_GREEN",
+  "x": -1040,
+  "y": 900,
+  "label": "A_DONE",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "cr": 50,
+   "cg": 200,
+   "cb": 80,
+   "colorName": "green"
+  }
+ },
+ {
+  "id": "rLA",
+  "kind": "Resistor_1k",
+  "x": -990,
+  "y": 900,
+  "label": "",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "resistance": "330",
+   "isCustom": true
+  }
+ },
+ {
+  "id": "uB1",
+  "kind": "DFlipFlop74175",
+  "x": 438,
+  "y": 768,
+  "label": "B RANK REG 74HC175",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "q": [
+    false,
+    false,
+    false,
+    false
+   ]
+  }
+ },
+ {
+  "id": "uB2",
+  "kind": "DFlipFlop7474",
+  "x": 678,
+  "y": 768,
+  "label": "B DONE FF 74HC74",
+  "locked": false,
+  "attrs": {
+   "angle": 0
+  }
+ },
+ {
+  "id": "uB3",
+  "kind": "ANDGate7411",
+  "x": 918,
+  "y": 768,
+  "label": "A/B ACCEPT 74HC11",
+  "locked": false,
+  "attrs": {
+   "angle": 0
+  }
+ },
+ {
+  "id": "bB",
+  "kind": "PushButton",
+  "x": 440,
+  "y": 640,
+  "label": "B SUBMIT",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "on": false
+  }
+ },
+ {
+  "id": "pB",
+  "kind": "Resistor_1k",
+  "x": 360,
+  "y": 880,
+  "label": "",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "resistance": "10000",
+   "isCustom": true
+  }
+ },
+ {
+  "id": "LB",
+  "kind": "LED_GREEN",
+  "x": 560,
+  "y": 900,
+  "label": "B_DONE",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "cr": 50,
+   "cg": 200,
+   "cb": 80,
+   "colorName": "green"
+  }
+ },
+ {
+  "id": "rLB",
+  "kind": "Resistor_1k",
+  "x": 610,
+  "y": 900,
+  "label": "",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "resistance": "330",
+   "isCustom": true
+  }
+ },
+ {
+  "id": "uS1",
+  "kind": "ANDGate7408",
+  "x": 438,
+  "y": 1468,
+  "label": "DISPLAY GATE 74HC08",
+  "locked": false,
+  "attrs": {
+   "angle": 0
+  }
+ },
+ {
+  "id": "uS2",
+  "kind": "ORGate7432",
+  "x": 678,
+  "y": 1468,
+  "label": "FINAL OR 74HC32",
+  "locked": false,
+  "attrs": {
+   "angle": 0
+  }
+ },
+ {
+  "id": "uS3",
+  "kind": "DFlipFlop7474",
+  "x": 918,
+  "y": 1468,
+  "label": "GAME OVER FF 74HC74",
+  "locked": false,
+  "attrs": {
+   "angle": 0
+  }
+ },
+ {
+  "id": "uS4",
+  "kind": "NOTGate7414",
+  "x": 1158,
+  "y": 1468,
+  "label": "RESET/INV 74HC14",
+  "locked": false,
+  "attrs": {
+   "angle": 0
+  }
+ },
+ {
+  "id": "bR",
+  "kind": "PushButton",
+  "x": 450,
+  "y": 1340,
+  "label": "ROUND/GAME RESET",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "on": false
+  }
+ },
+ {
+  "id": "pR",
+  "kind": "Resistor_1k",
+  "x": 380,
+  "y": 1560,
+  "label": "",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "resistance": "10000",
+   "isCustom": true
+  }
+ },
+ {
+  "id": "LGO",
+  "kind": "LED_RED",
+  "x": 760,
+  "y": 1660,
+  "label": "GAME_OVER",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "cr": 220,
+   "cg": 50,
+   "cb": 50,
+   "colorName": "red"
+  }
+ },
+ {
+  "id": "rGO",
+  "kind": "Resistor_1k",
+  "x": 810,
+  "y": 1660,
+  "label": "",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "resistance": "330",
+   "isCustom": true
+  }
+ },
+ {
+  "id": "LD1",
+  "kind": "LED_RED",
+  "x": 1000,
+  "y": 1660,
+  "label": "A_WIN_DISPLAY",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "cr": 220,
+   "cg": 50,
+   "cb": 50,
+   "colorName": "red"
+  }
+ },
+ {
+  "id": "rLD1",
+  "kind": "Resistor_1k",
+  "x": 1050,
+  "y": 1660,
+  "label": "",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "resistance": "330",
+   "isCustom": true
+  }
+ },
+ {
+  "id": "LD2",
+  "kind": "LED_RED",
+  "x": 1180,
+  "y": 1660,
+  "label": "TIE_DISPLAY",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "cr": 220,
+   "cg": 50,
+   "cb": 50,
+   "colorName": "red"
+  }
+ },
+ {
+  "id": "rLD2",
+  "kind": "Resistor_1k",
+  "x": 1230,
+  "y": 1660,
+  "label": "",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "resistance": "330",
+   "isCustom": true
+  }
+ },
+ {
+  "id": "LD3",
+  "kind": "LED_RED",
+  "x": 1360,
+  "y": 1660,
+  "label": "B_WIN_DISPLAY",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "cr": 220,
+   "cg": 50,
+   "cb": 50,
+   "colorName": "red"
+  }
+ },
+ {
+  "id": "rLD3",
+  "kind": "Resistor_1k",
+  "x": 1410,
+  "y": 1660,
+  "label": "",
+  "locked": false,
+  "attrs": {
+   "angle": 0,
+   "resistance": "330",
+   "isCustom": true
+  }
+ }
+]
