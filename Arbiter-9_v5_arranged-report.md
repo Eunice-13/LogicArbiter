@@ -16,6 +16,16 @@ x = 288 column, 552 px pitch, small boards in row 0).
 | `Arbiter-9_v5_routed-wires.md` | delivery 3: the before/after table of every re-routed wire |
 | `_pins.json`, `_dumppins.js`, `_env.js`, `_bundle.js` | pin-geometry dump + the simulator harness used to produce and verify it |
 
+`verify_arrangement.js` and `_dumppins.js` load the LogicBench bundle through `_env.js`.
+That file (`_bundle.js`) is third-party and is not committed — re-create it with:
+
+```
+curl -s -L https://www.logicbench.online/simulator-app/js/dc605af64b.js -o _bundle.js
+```
+
+`arrange_layout.py` and the `check_*.py` scripts need no bundle; they read the JSON
+plus `_pins.json` only.
+
 ## 2. Board arrangement (target met)
 
 ```

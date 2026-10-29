@@ -1,0 +1,6 @@
+# logicbench bundle copy used by _env.js / verify_arrangement.js (re-fetch with the
+# curl command in Arbiter-9_v5_arranged-report.md; not part of this project)
+_bundle.js
+
+# local editor/tool state
+.backboard/
