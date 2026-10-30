@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "name": "final-na-to",
+  "name": "final-na-to-ata-5led",
   "boards": [
     {
       "index": 0,
       "cols": 30,
-      "x": 168,
-      "y": 192,
+      "x": -1488,
+      "y": -336,
       "locked": false,
       "angle": 0,
       "sizeKey": "half",
@@ -51,14 +51,24 @@
       "angle": 0,
       "sizeKey": "full",
       "rails": true
+    },
+    {
+      "index": 5,
+      "cols": 30,
+      "x": 1968,
+      "y": -336,
+      "locked": false,
+      "angle": 0,
+      "sizeKey": "half",
+      "rails": true
     }
   ],
   "parts": [
     {
       "id": "c2",
       "kind": "DIPSwitch",
-      "x": 176,
-      "y": 240,
+      "x": -904,
+      "y": -288,
       "label": "A INPUTS",
       "locked": false,
       "attrs": {
@@ -82,8 +92,8 @@
     {
       "id": "c3",
       "kind": "DIPSwitch",
-      "x": 752,
-      "y": 240,
+      "x": 1976,
+      "y": -288,
       "label": "B INPUTS",
       "locked": false,
       "attrs": {
@@ -107,8 +117,8 @@
     {
       "id": "c4",
       "kind": "Resistor_1k",
-      "x": 168,
-      "y": 374,
+      "x": -912,
+      "y": -154,
       "label": "",
       "locked": false,
       "attrs": {
@@ -120,8 +130,8 @@
     {
       "id": "c5",
       "kind": "Resistor_1k",
-      "x": 192,
-      "y": 374,
+      "x": -888,
+      "y": -154,
       "label": "",
       "locked": false,
       "attrs": {
@@ -133,8 +143,8 @@
     {
       "id": "c6",
       "kind": "Resistor_1k",
-      "x": 216,
-      "y": 374,
+      "x": -864,
+      "y": -154,
       "label": "",
       "locked": false,
       "attrs": {
@@ -146,8 +156,8 @@
     {
       "id": "c7",
       "kind": "Resistor_1k",
-      "x": 240,
-      "y": 374,
+      "x": -840,
+      "y": -154,
       "label": "",
       "locked": false,
       "attrs": {
@@ -159,8 +169,8 @@
     {
       "id": "c8",
       "kind": "Resistor_1k",
-      "x": 816,
-      "y": 374,
+      "x": 2040,
+      "y": -154,
       "label": "",
       "locked": false,
       "attrs": {
@@ -172,8 +182,8 @@
     {
       "id": "c9",
       "kind": "Resistor_1k",
-      "x": 744,
-      "y": 374,
+      "x": 1968,
+      "y": -154,
       "label": "",
       "locked": false,
       "attrs": {
@@ -185,8 +195,8 @@
     {
       "id": "c10",
       "kind": "Resistor_1k",
-      "x": 768,
-      "y": 374,
+      "x": 1992,
+      "y": -154,
       "label": "",
       "locked": false,
       "attrs": {
@@ -198,8 +208,8 @@
     {
       "id": "c11",
       "kind": "Resistor_1k",
-      "x": 792,
-      "y": 374,
+      "x": 2016,
+      "y": -154,
       "label": "",
       "locked": false,
       "attrs": {
@@ -522,36 +532,6 @@
       }
     },
     {
-      "id": "c4003",
-      "kind": "LED_GREEN",
-      "x": 1078.344827586207,
-      "y": -1307.5862068965516,
-      "label": "A_Win_Final",
-      "locked": false,
-      "attrs": {
-        "angle": 0,
-        "cr": 50,
-        "cg": 220,
-        "cb": 50,
-        "colorName": "green"
-      }
-    },
-    {
-      "id": "c4004",
-      "kind": "LED_GREEN",
-      "x": 1222.344827586207,
-      "y": -1307.5862068965516,
-      "label": "B_Win_Final",
-      "locked": false,
-      "attrs": {
-        "angle": 0,
-        "cr": 50,
-        "cg": 220,
-        "cb": 50,
-        "colorName": "green"
-      }
-    },
-    {
       "id": "c4005",
       "kind": "LED_YELLOW",
       "x": 1366.344827586207,
@@ -598,32 +578,6 @@
       "id": "c4102",
       "kind": "Resistor_1k",
       "x": 912,
-      "y": -1186,
-      "label": "",
-      "locked": false,
-      "attrs": {
-        "angle": 0,
-        "resistance": "330",
-        "isCustom": true
-      }
-    },
-    {
-      "id": "c4103",
-      "kind": "Resistor_1k",
-      "x": 1056,
-      "y": -1186,
-      "label": "",
-      "locked": false,
-      "attrs": {
-        "angle": 0,
-        "resistance": "330",
-        "isCustom": true
-      }
-    },
-    {
-      "id": "c4104",
-      "kind": "Resistor_1k",
-      "x": 1200,
       "y": -1186,
       "label": "",
       "locked": false,
@@ -700,31 +654,6 @@
       "id": "j53",
       "x": 839.5497111276246,
       "y": -1002.4156499083373
-    },
-    {
-      "id": "j54",
-      "x": 1376.7836637129697,
-      "y": -1014.2386484408854
-    },
-    {
-      "id": "j77",
-      "x": 1379.7514990287445,
-      "y": -444.1033575570674
-    },
-    {
-      "id": "j78",
-      "x": 1272.6542896566807,
-      "y": -988.967827893912
-    },
-    {
-      "id": "j79",
-      "x": 1199.8340186390976,
-      "y": -1015.307716500178
-    },
-    {
-      "id": "j80",
-      "x": 1056.15739801456,
-      "y": -987.1600767783284
     },
     {
       "id": "j81",
@@ -1007,11 +936,6 @@
       "y": -391.38377640934584
     },
     {
-      "id": "j4829",
-      "x": 140.49776041860235,
-      "y": -192.6176118610091
-    },
-    {
       "id": "j4830",
       "x": 817.3967705029553,
       "y": -55.314059452275494
@@ -1040,16 +964,6 @@
       "id": "j4836",
       "x": 1165.7428117653153,
       "y": -418.8862404017588
-    },
-    {
-      "id": "j4837",
-      "x": 152.55792454555285,
-      "y": -202.85860158848536
-    },
-    {
-      "id": "j4838",
-      "x": 151.46258172155203,
-      "y": 158.6565209654999
     },
     {
       "id": "j4839",
@@ -1092,11 +1006,6 @@
       "y": -475.34583514129184
     },
     {
-      "id": "j5109",
-      "x": 914.9805099117806,
-      "y": 350.0428337449074
-    },
-    {
       "id": "j5110",
       "x": 599.6005736344835,
       "y": 79.52026480681359
@@ -1107,24 +1016,9 @@
       "y": 146.34101257705873
     },
     {
-      "id": "j5387",
-      "x": 137.66366057270307,
-      "y": 342.95706945429623
-    },
-    {
-      "id": "j5388",
-      "x": 288.2331534090247,
-      "y": 159.5421194421573
-    },
-    {
       "id": "j6129",
       "x": 210.97119926478348,
       "y": -71.82842158178761
-    },
-    {
-      "id": "j7247",
-      "x": 624.7153117866239,
-      "y": 303.68690856995494
     },
     {
       "id": "j8958",
@@ -1142,16 +1036,6 @@
       "y": 91.68758133162068
     },
     {
-      "id": "j8961",
-      "x": 504.78925753863507,
-      "y": 339.74824541927234
-    },
-    {
-      "id": "j9256",
-      "x": 501.3552353917958,
-      "y": -217.14825236864834
-    },
-    {
       "id": "j9257",
       "x": 624.7536346519181,
       "y": -363.76817325959087
@@ -1165,16 +1049,6 @@
       "id": "j9461",
       "x": 488.9044192651215,
       "y": -231.68380943604595
-    },
-    {
-      "id": "j9462",
-      "x": 898.9441231432569,
-      "y": 335.8068978979459
-    },
-    {
-      "id": "j9463",
-      "x": 768.1959284861532,
-      "y": 121.75683258769996
     },
     {
       "id": "j9464",
@@ -1983,32 +1857,6 @@
     {
       "a": {
         "type": "bus",
-        "board": 0,
-        "bus": "TP",
-        "col": 29
-      },
-      "b": {
-        "type": "bus",
-        "board": 1,
-        "bus": "BP",
-        "col": 59
-      },
-      "color": "#e53e3e",
-      "locked": false,
-      "pivots": [
-        [
-          1711.7300048201585,
-          192
-        ],
-        [
-          1711.7300048201585,
-          24
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "bus",
         "board": 3,
         "bus": "BP",
         "col": 0
@@ -2016,23 +1864,6 @@
       "b": {
         "type": "bus",
         "board": 3,
-        "bus": "TP",
-        "col": 0
-      },
-      "color": "#e53e3e",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "bus",
-        "board": 3,
-        "bus": "TP",
-        "col": 29
-      },
-      "b": {
-        "type": "bus",
-        "board": 0,
         "bus": "TP",
         "col": 0
       },
@@ -2065,53 +1896,6 @@
           48
         ]
       ]
-    },
-    {
-      "a": {
-        "type": "bus",
-        "board": 0,
-        "bus": "BN",
-        "col": 29
-      },
-      "b": {
-        "type": "bus",
-        "board": 1,
-        "bus": "BN",
-        "col": 60
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          933.9300655331746,
-          576.8311061493038
-        ],
-        [
-          929.9190673854227,
-          203.14886628639204
-        ],
-        [
-          1727.6259356487767,
-          200.64099569769297
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "bus",
-        "board": 3,
-        "bus": "BN",
-        "col": 29
-      },
-      "b": {
-        "type": "bus",
-        "board": 0,
-        "bus": "BN",
-        "col": 0
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": []
     },
     {
       "a": {
@@ -2356,58 +2140,6 @@
       "a": {
         "type": "hole",
         "board": 4,
-        "col": 35,
-        "row": 7
-      },
-      "b": {
-        "type": "bus",
-        "board": 4,
-        "bus": "BN",
-        "col": 35
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          1140,
-          -1176
-        ],
-        [
-          1140,
-          -1056
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 4,
-        "col": 41,
-        "row": 7
-      },
-      "b": {
-        "type": "bus",
-        "board": 4,
-        "bus": "BN",
-        "col": 41
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          1284,
-          -1176
-        ],
-        [
-          1284,
-          -1056
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 4,
         "col": 47,
         "row": 7
       },
@@ -2531,110 +2263,6 @@
         "id": "j52"
       },
       "color": "#d69e2e",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 2,
-        "col": 40,
-        "row": 6
-      },
-      "b": {
-        "type": "joint",
-        "id": "j77"
-      },
-      "color": "#ed8936",
-      "locked": false,
-      "pivots": [
-        [
-          1248.1730922011916,
-          -441.56420324224746
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j77"
-      },
-      "b": {
-        "type": "joint",
-        "id": "j54"
-      },
-      "color": "#ed8936",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 2,
-        "col": 41,
-        "row": 3
-      },
-      "b": {
-        "type": "joint",
-        "id": "j78"
-      },
-      "color": "#ed8936",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j54"
-      },
-      "b": {
-        "type": "joint",
-        "id": "j79"
-      },
-      "color": "#ed8936",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j79"
-      },
-      "b": {
-        "type": "hole",
-        "board": 4,
-        "col": 38,
-        "row": 8
-      },
-      "color": "#ed8936",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j78"
-      },
-      "b": {
-        "type": "joint",
-        "id": "j80"
-      },
-      "color": "#ed8936",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j80"
-      },
-      "b": {
-        "type": "hole",
-        "board": 4,
-        "col": 32,
-        "row": 8
-      },
-      "color": "#ed8936",
       "locked": false,
       "pivots": []
     },
@@ -4286,21 +3914,6 @@
     },
     {
       "a": {
-        "type": "joint",
-        "id": "j4829"
-      },
-      "b": {
-        "type": "hole",
-        "board": 1,
-        "col": 2,
-        "row": 3
-      },
-      "color": "#3182ce",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
         "type": "hole",
         "board": 1,
         "col": 30,
@@ -4492,43 +4105,6 @@
           -95.8365464322023
         ]
       ]
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j4837"
-      },
-      "b": {
-        "type": "hole",
-        "board": 1,
-        "col": 4,
-        "row": 3
-      },
-      "color": "#3182ce",
-      "locked": false,
-      "pivots": [
-        [
-          264.0859650458775,
-          -202.9014848766172
-        ],
-        [
-          384.4598383067393,
-          -204.46813326114497
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j4838"
-      },
-      "b": {
-        "type": "joint",
-        "id": "j4837"
-      },
-      "color": "#3182ce",
-      "locked": false,
-      "pivots": []
     },
     {
       "a": {
@@ -4848,41 +4424,6 @@
     {
       "a": {
         "type": "hole",
-        "board": 0,
-        "col": 25,
-        "row": 2
-      },
-      "b": {
-        "type": "joint",
-        "id": "j5109"
-      },
-      "color": "#805ad5",
-      "locked": false,
-      "pivots": [
-        [
-          767.910163202292,
-          349.49492398956
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j5109"
-      },
-      "b": {
-        "type": "hole",
-        "board": 1,
-        "col": 26,
-        "row": 8
-      },
-      "color": "#805ad5",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "hole",
         "board": 1,
         "col": 13,
         "row": 7
@@ -5046,332 +4587,6 @@
     {
       "a": {
         "type": "hole",
-        "board": 0,
-        "col": 1,
-        "row": 6
-      },
-      "b": {
-        "type": "bus",
-        "board": 0,
-        "bus": "BN",
-        "col": 1
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          204,
-          432
-        ],
-        [
-          204,
-          576
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 2,
-        "row": 6
-      },
-      "b": {
-        "type": "bus",
-        "board": 0,
-        "bus": "BN",
-        "col": 2
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          228,
-          432
-        ],
-        [
-          228,
-          576
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 3,
-        "row": 6
-      },
-      "b": {
-        "type": "bus",
-        "board": 0,
-        "bus": "BN",
-        "col": 3
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          252,
-          432
-        ],
-        [
-          252,
-          576
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 4,
-        "row": 6
-      },
-      "b": {
-        "type": "bus",
-        "board": 0,
-        "bus": "BN",
-        "col": 4
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          276,
-          432
-        ],
-        [
-          276,
-          576
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 25,
-        "row": 6
-      },
-      "b": {
-        "type": "bus",
-        "board": 0,
-        "bus": "BN",
-        "col": 25
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          780,
-          432
-        ],
-        [
-          780,
-          576
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 26,
-        "row": 6
-      },
-      "b": {
-        "type": "bus",
-        "board": 0,
-        "bus": "BN",
-        "col": 26
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          804,
-          432
-        ],
-        [
-          804,
-          576
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 27,
-        "row": 6
-      },
-      "b": {
-        "type": "bus",
-        "board": 0,
-        "bus": "BN",
-        "col": 27
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          828,
-          432
-        ],
-        [
-          828,
-          576
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 28,
-        "row": 6
-      },
-      "b": {
-        "type": "bus",
-        "board": 0,
-        "bus": "BN",
-        "col": 28
-      },
-      "color": "#1a1a1a",
-      "locked": false,
-      "pivots": [
-        [
-          852,
-          432
-        ],
-        [
-          852,
-          576
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 3,
-        "row": 2
-      },
-      "b": {
-        "type": "joint",
-        "id": "j5387"
-      },
-      "color": "#3182ce",
-      "locked": false,
-      "pivots": [
-        [
-          240.713186353923,
-          343.4278302767218
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 4,
-        "row": 2
-      },
-      "b": {
-        "type": "joint",
-        "id": "j5388"
-      },
-      "color": "#3182ce",
-      "locked": false,
-      "pivots": [
-        [
-          288.1563534676744,
-          312.3364384380296
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j5388"
-      },
-      "b": {
-        "type": "joint",
-        "id": "j4838"
-      },
-      "color": "#3182ce",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 1,
-        "row": 2
-      },
-      "b": {
-        "type": "hole",
-        "board": 1,
-        "col": 1,
-        "row": 8
-      },
-      "color": "#3182ce",
-      "locked": false,
-      "pivots": [
-        [
-          192,
-          336
-        ],
-        [
-          312,
-          336
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j5387"
-      },
-      "b": {
-        "type": "joint",
-        "id": "j4829"
-      },
-      "color": "#3182ce",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 2,
-        "row": 2
-      },
-      "b": {
-        "type": "hole",
-        "board": 1,
-        "col": 3,
-        "row": 8
-      },
-      "color": "#3182ce",
-      "locked": false,
-      "pivots": [
-        [
-          216.213186353923,
-          352.5944969433885
-        ],
-        [
-          360.2116561461851,
-          352.093234478528
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
         "board": 1,
         "col": 3,
         "row": 6
@@ -5427,41 +4642,6 @@
           -84
         ]
       ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 26,
-        "row": 2
-      },
-      "b": {
-        "type": "joint",
-        "id": "j7247"
-      },
-      "color": "#805ad5",
-      "locked": false,
-      "pivots": [
-        [
-          791.3583131719683,
-          302.7765584279665
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j7247"
-      },
-      "b": {
-        "type": "hole",
-        "board": 1,
-        "col": 14,
-        "row": 7
-      },
-      "color": "#805ad5",
-      "locked": false,
-      "pivots": []
     },
     {
       "a": {
@@ -5574,59 +4754,6 @@
     },
     {
       "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 27,
-        "row": 2
-      },
-      "b": {
-        "type": "joint",
-        "id": "j8961"
-      },
-      "color": "#805ad5",
-      "locked": false,
-      "pivots": [
-        [
-          816,
-          337.88340625505555
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j8961"
-      },
-      "b": {
-        "type": "joint",
-        "id": "j9256"
-      },
-      "color": "#805ad5",
-      "locked": false,
-      "pivots": []
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j9256"
-      },
-      "b": {
-        "type": "hole",
-        "board": 1,
-        "col": 13,
-        "row": 3
-      },
-      "color": "#805ad5",
-      "locked": false,
-      "pivots": [
-        [
-          599.7503773321858,
-          -216.5154861825365
-        ]
-      ]
-    },
-    {
-      "a": {
         "type": "joint",
         "id": "j9257"
       },
@@ -5716,64 +4843,6 @@
         [
           1439.7690633054995,
           97.06192360779764
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "hole",
-        "board": 0,
-        "col": 28,
-        "row": 2
-      },
-      "b": {
-        "type": "joint",
-        "id": "j9462"
-      },
-      "color": "#805ad5",
-      "locked": false,
-      "pivots": [
-        [
-          840.6723346820033,
-          336.0670195130203
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j9462"
-      },
-      "b": {
-        "type": "joint",
-        "id": "j9463"
-      },
-      "color": "#805ad5",
-      "locked": false,
-      "pivots": [
-        [
-          898.2387753132188,
-          119.94473646829427
-        ]
-      ]
-    },
-    {
-      "a": {
-        "type": "joint",
-        "id": "j9463"
-      },
-      "b": {
-        "type": "hole",
-        "board": 1,
-        "col": 15,
-        "row": 3
-      },
-      "color": "#805ad5",
-      "locked": false,
-      "pivots": [
-        [
-          768.8084162263336,
-          -192.20992856974587
         ]
       ]
     },
@@ -8674,6 +7743,470 @@
       "color": "#1a1a1a",
       "locked": false,
       "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 25,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 1,
+        "row": 8
+      },
+      "color": "#3182ce",
+      "locked": false,
+      "pivots": [
+        [
+          -888,
+          -264
+        ],
+        [
+          312,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 26,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 3,
+        "row": 8
+      },
+      "color": "#3182ce",
+      "locked": false,
+      "pivots": [
+        [
+          -864,
+          -240
+        ],
+        [
+          360,
+          -240
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 27,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 2,
+        "row": 3
+      },
+      "color": "#3182ce",
+      "locked": false,
+      "pivots": [
+        [
+          -840,
+          -216
+        ],
+        [
+          336,
+          -216
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 28,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 4,
+        "row": 3
+      },
+      "color": "#3182ce",
+      "locked": false,
+      "pivots": [
+        [
+          -816,
+          -204
+        ],
+        [
+          384,
+          -204
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 5,
+        "col": 1,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 26,
+        "row": 8
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          1992,
+          -264
+        ],
+        [
+          912,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 5,
+        "col": 2,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 14,
+        "row": 7
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          2016,
+          -240
+        ],
+        [
+          624,
+          -240
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 5,
+        "col": 3,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 13,
+        "row": 3
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          2040,
+          -216
+        ],
+        [
+          600,
+          -216
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 5,
+        "col": 4,
+        "row": 2
+      },
+      "b": {
+        "type": "hole",
+        "board": 1,
+        "col": 15,
+        "row": 3
+      },
+      "color": "#805ad5",
+      "locked": false,
+      "pivots": [
+        [
+          2064,
+          -204
+        ],
+        [
+          648,
+          -204
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 25,
+        "row": 6
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 25
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 26,
+        "row": 6
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 26
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 27,
+        "row": 6
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 27
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 0,
+        "col": 28,
+        "row": 6
+      },
+      "b": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 28
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 5,
+        "col": 1,
+        "row": 6
+      },
+      "b": {
+        "type": "bus",
+        "board": 5,
+        "bus": "BN",
+        "col": 1
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 5,
+        "col": 2,
+        "row": 6
+      },
+      "b": {
+        "type": "bus",
+        "board": 5,
+        "bus": "BN",
+        "col": 2
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 5,
+        "col": 3,
+        "row": 6
+      },
+      "b": {
+        "type": "bus",
+        "board": 5,
+        "bus": "BN",
+        "col": 3
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "hole",
+        "board": 5,
+        "col": 4,
+        "row": 6
+      },
+      "b": {
+        "type": "bus",
+        "board": 5,
+        "bus": "BN",
+        "col": 4
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "TP",
+        "col": 29
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 0,
+        "bus": "BN",
+        "col": 29
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 0
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 5,
+        "bus": "TP",
+        "col": 0
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 62
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 5,
+        "bus": "BN",
+        "col": 0
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 62
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": []
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 3,
+        "bus": "TP",
+        "col": 29
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "TP",
+        "col": 0
+      },
+      "color": "#e53e3e",
+      "locked": false,
+      "pivots": [
+        [
+          240,
+          264
+        ],
+        [
+          240,
+          -264
+        ]
+      ]
+    },
+    {
+      "a": {
+        "type": "bus",
+        "board": 3,
+        "bus": "BN",
+        "col": 29
+      },
+      "b": {
+        "type": "bus",
+        "board": 1,
+        "bus": "BN",
+        "col": 0
+      },
+      "color": "#1a1a1a",
+      "locked": false,
+      "pivots": [
+        [
+          264,
+          504
+        ],
+        [
+          264,
+          -24
+        ]
+      ]
     }
   ],
   "notes": [
@@ -8749,7 +8282,7 @@
     },
     {
       "id": "note_9005",
-      "text": "9-LED OUTPUT STRIP: A_Win / Tie / B_Win / Flag_A / Flag_B / A_Final / B_Final / Turn_A / Turn_B.",
+      "text": "7-LED OUTPUT STRIP: A_Win / Tie / B_Win / Flag_A / Flag_B / Turn_A / Turn_B. (Final-win signals are still computed internally.)",
       "x": 264,
       "y": -1536,
       "w": 1100,
@@ -8758,6 +8291,34 @@
       "fontSize": 12,
       "fontFamily": "Arial",
       "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_9010",
+      "text": "PLAYER A",
+      "x": -1464,
+      "y": -392,
+      "w": 300,
+      "h": 30,
+      "color": "#000000",
+      "fontSize": 16,
+      "fontFamily": "Arial",
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    {
+      "id": "note_9011",
+      "text": "PLAYER B",
+      "x": 1992,
+      "y": -392,
+      "w": 300,
+      "h": 30,
+      "color": "#000000",
+      "fontSize": 16,
+      "fontFamily": "Arial",
+      "bold": true,
       "italic": false,
       "underline": false
     }
