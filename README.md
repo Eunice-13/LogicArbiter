@@ -409,7 +409,7 @@ Note that `B0` uses `c8`, not `c11`; the physical layout order is not the same a
 
 For the 3-LED version, read only the `A_Win`, `Tie`, and `B_Win` columns.
 
-These are examples only. **Section 21 lists the complete truth table for every one of the 1,024 input combinations.**
+These are examples only. **Section 21 lists the complete truth table for every valid piece pair and Turn combination (the unused `1111` code is excluded).**
 
 ---
 
@@ -666,294 +666,256 @@ The final JSONs are ready to use. If you want to change the layout or logic:
 
 ---
 
-## 21. Complete truth table — every input combination
+## 21. Complete truth table — valid pieces only
 
-This is the full behaviour of the arbiter in `final-na-to-ata.json` (and the same logic in `Arbiter-9.json` / `Arbiter-9-3LED.json`). Inputs are `A3 A2 A1 A0`, `B3 B2 B1 B0`, `Turn_A`, and `Turn_B`; outputs are the seven display LEDs plus the two internal Final signals. `final-na-to-ata.json` shows `A_Win`, `Tie`, `B_Win`, `Flag_A`, `Flag_B`, `Turn_A`, and `Turn_B`; `Arbiter-9.json` shows the same seven plus `A_Win_Final` and `B_Win_Final`, and the 3-LED build shows only the first three.
+This is the full behaviour of the arbiter in `final-na-to-ata.json` (and the same logic in `Arbiter-9.json` / `Arbiter-9-3LED.json`). The two piece inputs are `A3 A2 A1 A0` and `B3 B2 B1 B0`; the Turn inputs are `Turn_A` and `Turn_B`. The outputs are the seven display LEDs plus the two internal Final signals.
 
-`1` means the LED is ON / the signal is HIGH. `A_Fin` and `B_Fin` are the internal `A_Win_Final` / `B_Win_Final` signals; they are still computed even though this 7-LED build does not display them. `Turn_A` and `Turn_B` LEDs simply follow their switches.
+Only the 15 real piece codes `0000`–`1110` are included. Code `1111` is unused, so every row containing `1111` has been removed. `1` means the LED is ON / the signal is HIGH. `A_Fin` and `B_Fin` are the internal `A_Win_Final` / `B_Win_Final` signals; they are still computed even though this 7-LED build does not display them.
 
-**Coverage:** all `16 x 16 x 4 = 1,024` input combinations are listed below. `Turn_A`/`Turn_B` can only change the result when both pieces are Flags, so the 255 non-Flag-vs-Flag pairs are shown once (with Turn ignored), and the Flag-vs-Flag pair is shown for all four Turn combinations. That is `255 x 4 = 1,020` plus `4` = `1,024` combinations.
+**Coverage:** 15 valid A codes x 15 valid B codes x 4 Turn combinations = `900` valid input combinations. `Turn_A`/`Turn_B` only change the result when both pieces are Flags, so the 224 other valid pairs are shown once with `Turn_A = 0`, `Turn_B = 0`; for those rows the Turn switches are don't-care (setting one only lights its yellow Turn LED). The Flag-vs-Flag pair is shown for all four Turn combinations. That covers all `900` valid cases: `224 x 4 = 896` plus `4` = `900`.
 
-### 21.1 All piece pairs except Flag vs Flag
+### 21.1 Complete table — every valid piece pair
 
-`Turn_A = 0`, `Turn_B = 0`. For every row in this table the Turn switches do not affect `A_Win`, `Tie`, or `B_Win`; setting either Turn switch only lights its yellow Turn LED.
+The Flag-vs-Flag rows (`A = 0000`, `B = 0000`) appear four times, once per Turn combination. Every other row has both Turn switches OFF.
 
-| A | A piece | B | B piece | A_Win | Tie | B_Win | Flag_A | Flag_B | A_Fin | B_Fin | Decision |
-|---|---|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|---|
-| `0000` | Flag | `0001` | Private | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `0010` | Sergeant | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `0100` | 1st Lieutenant | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `0101` | Captain | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `0110` | Major | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `1000` | Colonel | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `1001` | Brigadier General | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `1010` | Major General | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `1011` | Lieutenant General | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `1100` | 4-Star General | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `1101` | 5-Star General | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `1110` | Spy | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
-| `0000` | Flag | `1111` | Unused | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag (1111 unused) |
-| `0001` | Private | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `0001` | Private | `0001` | Private | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `0001` | Private | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0001` | Private | `1110` | Spy | 1 | 0 | 0 | 0 | 0 | 0 | 0 | Private beats Spy (A) |
-| `0001` | Private | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `0010` | Sergeant | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `0010` | Sergeant | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0010` | Sergeant | `0010` | Sergeant | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `0010` | Sergeant | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0010` | Sergeant | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `0011` | 2nd Lieutenant | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `0011` | 2nd Lieutenant | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0011` | 2nd Lieutenant | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0011` | 2nd Lieutenant | `0011` | 2nd Lieutenant | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `0011` | 2nd Lieutenant | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0011` | 2nd Lieutenant | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `0100` | 1st Lieutenant | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `0100` | 1st Lieutenant | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0100` | 1st Lieutenant | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0100` | 1st Lieutenant | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0100` | 1st Lieutenant | `0100` | 1st Lieutenant | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `0100` | 1st Lieutenant | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0100` | 1st Lieutenant | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0100` | 1st Lieutenant | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0100` | 1st Lieutenant | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0100` | 1st Lieutenant | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0100` | 1st Lieutenant | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0100` | 1st Lieutenant | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0100` | 1st Lieutenant | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0100` | 1st Lieutenant | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0100` | 1st Lieutenant | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0100` | 1st Lieutenant | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `0101` | Captain | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `0101` | Captain | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0101` | Captain | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0101` | Captain | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0101` | Captain | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0101` | Captain | `0101` | Captain | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `0101` | Captain | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0101` | Captain | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0101` | Captain | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0101` | Captain | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0101` | Captain | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0101` | Captain | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0101` | Captain | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0101` | Captain | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0101` | Captain | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0101` | Captain | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `0110` | Major | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `0110` | Major | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0110` | Major | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0110` | Major | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0110` | Major | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0110` | Major | `0101` | Captain | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0110` | Major | `0110` | Major | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `0110` | Major | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0110` | Major | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0110` | Major | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0110` | Major | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0110` | Major | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0110` | Major | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0110` | Major | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0110` | Major | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0110` | Major | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `0111` | Lieutenant Colonel | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `0111` | Lieutenant Colonel | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0111` | Lieutenant Colonel | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0111` | Lieutenant Colonel | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0111` | Lieutenant Colonel | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0111` | Lieutenant Colonel | `0101` | Captain | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0111` | Lieutenant Colonel | `0110` | Major | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `0111` | Lieutenant Colonel | `0111` | Lieutenant Colonel | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `0111` | Lieutenant Colonel | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0111` | Lieutenant Colonel | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0111` | Lieutenant Colonel | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0111` | Lieutenant Colonel | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0111` | Lieutenant Colonel | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0111` | Lieutenant Colonel | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0111` | Lieutenant Colonel | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `0111` | Lieutenant Colonel | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `1000` | Colonel | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `1000` | Colonel | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1000` | Colonel | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1000` | Colonel | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1000` | Colonel | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1000` | Colonel | `0101` | Captain | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1000` | Colonel | `0110` | Major | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1000` | Colonel | `0111` | Lieutenant Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1000` | Colonel | `1000` | Colonel | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `1000` | Colonel | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1000` | Colonel | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1000` | Colonel | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1000` | Colonel | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1000` | Colonel | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1000` | Colonel | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1000` | Colonel | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `1001` | Brigadier General | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `1001` | Brigadier General | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1001` | Brigadier General | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1001` | Brigadier General | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1001` | Brigadier General | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1001` | Brigadier General | `0101` | Captain | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1001` | Brigadier General | `0110` | Major | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1001` | Brigadier General | `0111` | Lieutenant Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1001` | Brigadier General | `1000` | Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1001` | Brigadier General | `1001` | Brigadier General | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `1001` | Brigadier General | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1001` | Brigadier General | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1001` | Brigadier General | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1001` | Brigadier General | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1001` | Brigadier General | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1001` | Brigadier General | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `1010` | Major General | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `1010` | Major General | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1010` | Major General | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1010` | Major General | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1010` | Major General | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1010` | Major General | `0101` | Captain | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1010` | Major General | `0110` | Major | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1010` | Major General | `0111` | Lieutenant Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1010` | Major General | `1000` | Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1010` | Major General | `1001` | Brigadier General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1010` | Major General | `1010` | Major General | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `1010` | Major General | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1010` | Major General | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1010` | Major General | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1010` | Major General | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1010` | Major General | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `1011` | Lieutenant General | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `1011` | Lieutenant General | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1011` | Lieutenant General | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1011` | Lieutenant General | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1011` | Lieutenant General | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1011` | Lieutenant General | `0101` | Captain | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1011` | Lieutenant General | `0110` | Major | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1011` | Lieutenant General | `0111` | Lieutenant Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1011` | Lieutenant General | `1000` | Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1011` | Lieutenant General | `1001` | Brigadier General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1011` | Lieutenant General | `1010` | Major General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1011` | Lieutenant General | `1011` | Lieutenant General | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `1011` | Lieutenant General | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1011` | Lieutenant General | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1011` | Lieutenant General | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1011` | Lieutenant General | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `1100` | 4-Star General | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `1100` | 4-Star General | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `0101` | Captain | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `0110` | Major | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `0111` | Lieutenant Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `1000` | Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `1001` | Brigadier General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `1010` | Major General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `1011` | Lieutenant General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1100` | 4-Star General | `1100` | 4-Star General | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `1100` | 4-Star General | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1100` | 4-Star General | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1100` | 4-Star General | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `1101` | 5-Star General | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `1101` | 5-Star General | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `0101` | Captain | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `0110` | Major | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `0111` | Lieutenant Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `1000` | Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `1001` | Brigadier General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `1010` | Major General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `1011` | Lieutenant General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `1100` | 4-Star General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1101` | 5-Star General | `1101` | 5-Star General | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `1101` | 5-Star General | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
-| `1101` | 5-Star General | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `1110` | Spy | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
-| `1110` | Spy | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | Private beats Spy (B) |
-| `1110` | Spy | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `0101` | Captain | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `0110` | Major | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `0111` | Lieutenant Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `1000` | Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `1001` | Brigadier General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `1010` | Major General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `1011` | Lieutenant General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `1100` | 4-Star General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `1101` | 5-Star General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
-| `1110` | Spy | `1110` | Spy | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
-| `1110` | Spy | `1111` | Unused | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A (1111 unused) |
-| `1111` | Unused | `0000` | Flag | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag (1111 unused) |
-| `1111` | Unused | `0001` | Private | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `0010` | Sergeant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `0011` | 2nd Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `0100` | 1st Lieutenant | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `0101` | Captain | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `0110` | Major | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `0111` | Lieutenant Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `1000` | Colonel | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `1001` | Brigadier General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `1010` | Major General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `1011` | Lieutenant General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `1100` | 4-Star General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `1101` | 5-Star General | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `1110` | Spy | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B (1111 unused) |
-| `1111` | Unused | `1111` | Unused | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks (1111 unused) |
+| A | A piece | B | B piece | Turn_A | Turn_B | A_Win | Tie | B_Win | Flag_A | Flag_B | A_Fin | B_Fin | Decision |
+|---|---|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|---|
+| `0000` | Flag | `0000` | Flag | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | Flag vs Flag: invalid, no attacker |
+| `0000` | Flag | `0000` | Flag | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 0 | 1 | Flag vs Flag: B attacks, B wins |
+| `0000` | Flag | `0000` | Flag | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 0 | Flag vs Flag: A attacks, A wins |
+| `0000` | Flag | `0000` | Flag | 1 | 1 | 1 | 0 | 1 | 1 | 1 | 1 | 1 | Flag vs Flag: invalid, both attack |
+| `0000` | Flag | `0001` | Private | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `0010` | Sergeant | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `0011` | 2nd Lieutenant | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `0100` | 1st Lieutenant | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `0101` | Captain | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `0110` | Major | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `0111` | Lieutenant Colonel | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `1000` | Colonel | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `1001` | Brigadier General | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `1010` | Major General | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0000` | Flag | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | B captures A's Flag |
+| `0001` | Private | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `0001` | Private | `0001` | Private | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `0001` | Private | `0010` | Sergeant | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `0011` | 2nd Lieutenant | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `0100` | 1st Lieutenant | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `0101` | Captain | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `0110` | Major | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `0111` | Lieutenant Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `1000` | Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `1001` | Brigadier General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `1010` | Major General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0001` | Private | `1110` | Spy | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | Private beats Spy (A) |
+| `0010` | Sergeant | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `0010` | Sergeant | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0010` | Sergeant | `0010` | Sergeant | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `0010` | Sergeant | `0011` | 2nd Lieutenant | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `0100` | 1st Lieutenant | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `0101` | Captain | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `0110` | Major | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `0111` | Lieutenant Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `1000` | Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `1001` | Brigadier General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `1010` | Major General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0010` | Sergeant | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `0011` | 2nd Lieutenant | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0011` | 2nd Lieutenant | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0011` | 2nd Lieutenant | `0011` | 2nd Lieutenant | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `0011` | 2nd Lieutenant | `0100` | 1st Lieutenant | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `0101` | Captain | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `0110` | Major | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `0111` | Lieutenant Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `1000` | Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `1001` | Brigadier General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `1010` | Major General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0011` | 2nd Lieutenant | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0100` | 1st Lieutenant | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `0100` | 1st Lieutenant | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0100` | 1st Lieutenant | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0100` | 1st Lieutenant | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0100` | 1st Lieutenant | `0100` | 1st Lieutenant | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `0100` | 1st Lieutenant | `0101` | Captain | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0100` | 1st Lieutenant | `0110` | Major | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0100` | 1st Lieutenant | `0111` | Lieutenant Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0100` | 1st Lieutenant | `1000` | Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0100` | 1st Lieutenant | `1001` | Brigadier General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0100` | 1st Lieutenant | `1010` | Major General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0100` | 1st Lieutenant | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0100` | 1st Lieutenant | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0100` | 1st Lieutenant | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0100` | 1st Lieutenant | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0101` | Captain | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `0101` | Captain | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0101` | Captain | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0101` | Captain | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0101` | Captain | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0101` | Captain | `0101` | Captain | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `0101` | Captain | `0110` | Major | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0101` | Captain | `0111` | Lieutenant Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0101` | Captain | `1000` | Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0101` | Captain | `1001` | Brigadier General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0101` | Captain | `1010` | Major General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0101` | Captain | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0101` | Captain | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0101` | Captain | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0101` | Captain | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0110` | Major | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `0110` | Major | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0110` | Major | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0110` | Major | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0110` | Major | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0110` | Major | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0110` | Major | `0110` | Major | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `0110` | Major | `0111` | Lieutenant Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0110` | Major | `1000` | Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0110` | Major | `1001` | Brigadier General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0110` | Major | `1010` | Major General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0110` | Major | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0110` | Major | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0110` | Major | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0110` | Major | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0111` | Lieutenant Colonel | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `0111` | Lieutenant Colonel | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0111` | Lieutenant Colonel | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0111` | Lieutenant Colonel | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0111` | Lieutenant Colonel | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0111` | Lieutenant Colonel | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0111` | Lieutenant Colonel | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `0111` | Lieutenant Colonel | `0111` | Lieutenant Colonel | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `0111` | Lieutenant Colonel | `1000` | Colonel | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0111` | Lieutenant Colonel | `1001` | Brigadier General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0111` | Lieutenant Colonel | `1010` | Major General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0111` | Lieutenant Colonel | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0111` | Lieutenant Colonel | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0111` | Lieutenant Colonel | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `0111` | Lieutenant Colonel | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1000` | Colonel | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `1000` | Colonel | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1000` | Colonel | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1000` | Colonel | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1000` | Colonel | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1000` | Colonel | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1000` | Colonel | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1000` | Colonel | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1000` | Colonel | `1000` | Colonel | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `1000` | Colonel | `1001` | Brigadier General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1000` | Colonel | `1010` | Major General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1000` | Colonel | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1000` | Colonel | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1000` | Colonel | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1000` | Colonel | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1001` | Brigadier General | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `1001` | Brigadier General | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1001` | Brigadier General | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1001` | Brigadier General | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1001` | Brigadier General | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1001` | Brigadier General | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1001` | Brigadier General | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1001` | Brigadier General | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1001` | Brigadier General | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1001` | Brigadier General | `1001` | Brigadier General | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `1001` | Brigadier General | `1010` | Major General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1001` | Brigadier General | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1001` | Brigadier General | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1001` | Brigadier General | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1001` | Brigadier General | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1010` | Major General | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `1010` | Major General | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1010` | Major General | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1010` | Major General | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1010` | Major General | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1010` | Major General | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1010` | Major General | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1010` | Major General | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1010` | Major General | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1010` | Major General | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1010` | Major General | `1010` | Major General | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `1010` | Major General | `1011` | Lieutenant General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1010` | Major General | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1010` | Major General | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1010` | Major General | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1011` | Lieutenant General | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `1011` | Lieutenant General | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1011` | Lieutenant General | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1011` | Lieutenant General | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1011` | Lieutenant General | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1011` | Lieutenant General | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1011` | Lieutenant General | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1011` | Lieutenant General | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1011` | Lieutenant General | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1011` | Lieutenant General | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1011` | Lieutenant General | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1011` | Lieutenant General | `1011` | Lieutenant General | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `1011` | Lieutenant General | `1100` | 4-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1011` | Lieutenant General | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1011` | Lieutenant General | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1100` | 4-Star General | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `1100` | 4-Star General | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1100` | 4-Star General | `1100` | 4-Star General | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `1100` | 4-Star General | `1101` | 5-Star General | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1100` | 4-Star General | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1101` | 5-Star General | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `1101` | 5-Star General | `0001` | Private | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1101` | 5-Star General | `1101` | 5-Star General | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
+| `1101` | 5-Star General | `1110` | Spy | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | B outranks A |
+| `1110` | Spy | `0000` | Flag | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | A captures B's Flag |
+| `1110` | Spy | `0001` | Private | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | Private beats Spy (B) |
+| `1110` | Spy | `0010` | Sergeant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `0011` | 2nd Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `0100` | 1st Lieutenant | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `0101` | Captain | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `0110` | Major | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `0111` | Lieutenant Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `1000` | Colonel | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `1001` | Brigadier General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `1010` | Major General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `1011` | Lieutenant General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `1100` | 4-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `1101` | 5-Star General | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | A outranks B |
+| `1110` | Spy | `1110` | Spy | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | Equal ranks |
 
-### 21.2 Flag vs Flag — all four Turn combinations
-
-`A = 0000` (Flag), `B = 0000` (Flag). This is the only pair where the Turn inputs matter. `00` and `11` are invalid for a real game; they are included because the circuit is deterministic for them too.
-
-| Turn_A | Turn_B | A_Win | Tie | B_Win | Flag_A | Flag_B | A_Fin | B_Fin | Turn_A LED | Turn_B LED | Meaning |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|---|
-| 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | Invalid: no attacker |
-| 0 | 1 | 0 | 0 | 1 | 1 | 1 | 0 | 1 | 0 | 1 | B attacks; B wins |
-| 1 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 0 | 1 | 0 | A attacks; A wins |
-| 1 | 1 | 1 | 0 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | Invalid: both attack |
-
-### 21.3 How to read the table
+### 21.2 How to read the table
 
 - `Flag_A = 1` exactly when `A = 0000`; `Flag_B = 1` exactly when `B = 0000`.
 - A Flag loses to every non-Flag piece, so a Flag only wins through the Flag-vs-Flag Turn rule.
 - `A_Fin = A_Win AND Flag_B`: A captured B's Flag. `B_Fin = B_Win AND Flag_A`: B captured A's Flag.
 - Private vs Spy is the only rank upset: `0001` beats `1110`. Every other non-equal pair follows the numeric code order.
 - Equal non-Flag codes produce `Tie = 1`, including Spy vs Spy and Private vs Private.
-- Code `1111` is not a game piece. Rows containing it are included so the table is complete; do not use `1111` in play.
-- This table was checked against the actual netlist with a gate-level sweep of all 1,024 combinations: 0 mismatches across 9,216 output comparisons.
+- For every non-Flag-vs-Flag row, `Turn_A = 0` / `Turn_B = 0` is shown, but those two inputs do not affect any result there. The Flag-vs-Flag rows show all four Turn states, including the two invalid ones (`00` = no attacker, `11` = both attack).
+- This table has 228 rows: 4 Flag-vs-Flag Turn cases + 224 other valid pairs. It was checked against the actual netlist with a gate-level sweep: 0 mismatches across all 900 valid input combinations.
 
